@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        ul {
+            margin: 10px;
+        }
+
+        li {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .fav {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+
+        <ul>
+            <li v-for="b in books" :class="{ fav: b.isFav }">
+                <h2><a :href="b.url">{{ b.title}}</a></h2>
+                <img v-bind:src="b.img" width="100px" height="100px"><br>
+                <i>{{ b.author }}</i>
+            </li>
+        </ul>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

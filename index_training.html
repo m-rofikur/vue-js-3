@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello vue</h1>
+
+    <div id="app">
+        <p>{{ title }}</p>
+        <p>Number is {{ number }}</p>
+        <button v-on:click="number++">increase</button>
+        <button v-on:click="number--">decrease</button>
+        <button @click="changeTitle('This is the new title')">New Title</button> <br>
+
+
+        <div class="box" @mouseover="handleEvent">Mouseover</div>
+        <div class="box" @mouseleave="handleEventArgs($event, 'this is data')">MouseLeave</div>
+
+        <!-- LOOP SECTION -->
+        <ul>
+            <li v-for="b in books">
+                <h3><a :href="b.url">{{ b.title}}</a></h3>
+                <i>{{ b.author }}</i>
+                <img v-bind:src="b.img" width="30px" height="30px">
+            </li>
+        </ul>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

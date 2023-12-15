@@ -1,0 +1,16 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "iqbal",
+      "email": "iqbal@jatis.com",
+      "phone": 628211334
+    },
+    {
+      "id": 2,
+      "name": "atha",
+      "email": "atha@jatis.com",
+      "phone": "6282113777"
+    }
+  ]
+}
